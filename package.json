@@ -1,0 +1,27 @@
+{
+  "name": "babelshark",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "@types/meteor": "^2.8.2",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.18",
+    "jquery": "^3.6.0",
+    "meteor-node-stubs": "^1.2.1",
+    "mysql2": "^3.0.1",
+    "typeorm": "^0.3.11"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.ts"
+    },
+    "testModule": "tests/main.js"
+  }
+}
